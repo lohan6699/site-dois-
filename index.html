@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anéis — como um homem amadurece</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Literata:opsz,wght@7..72,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Anéis, início">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="11" opacity=".5"/></svg>
+      Anéis
+    </a>
+    <nav aria-label="Seções">
+      <a href="#situacoes">Situações</a>
+      <a href="#areas">Seis áreas</a>
+      <a href="#teste">Teste</a>
+      <a href="#plano">Plano de 30 dias</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Maturidade não vem com os anos. Vem com o que você faz com eles.</h1>
+        <p class="lead">Um guia prático, sem discurso de “homem de alto valor”. São seis áreas para trabalhar, um teste rápido para ver onde você está e um plano de 30 dias para começar hoje.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#teste">Fazer o teste</a>
+          <a class="btn btn-line" href="#areas">Ver as seis áreas</a>
+        </div>
+      </div>
+      <div class="rings-box">
+        <svg id="rings" viewBox="0 0 400 400" role="group" aria-label="Seis anéis de crescimento, um para cada área da maturidade"></svg>
+        <p class="ring-caption" id="ringCaption" aria-live="polite">Como numa árvore, cada anel se apoia no anterior. Toque em um para ler sobre a área.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="situacoes">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>Maturidade aparece nos momentos difíceis</h2>
+        <p class="muted">Ninguém é maduro quando tudo vai bem. A diferença está no que você faz nos primeiros minutos depois do problema. Abra cada situação.</p>
+      </div>
+
+      <details class="sit">
+        <summary>Você recebeu uma crítica no trabalho</summary>
+        <div class="cols">
+          <div><h3>O que costuma acontecer</h3><p>Você se defende antes de terminar de ouvir, ou fica remoendo e culpa quem criticou.</p></div>
+          <div class="maduro"><h3>Resposta madura</h3><p>Você pede um exemplo concreto, agradece e separa o que é útil do que é só tom ruim. Depois escolhe uma coisa para mudar.</p></div>
+        </div>
+      </details>
+
+      <details class="sit">
+        <summary>Você discutiu feio com a parceira</summary>
+        <div class="cols">
+          <div><h3>O que costuma acontecer</h3><p>Ironia, voz alta ou o silêncio de castigo que dura dois dias.</p></div>
+          <div class="maduro"><h3>Resposta madura</h3><p>Você pede uma pausa com hora para voltar: “Preciso de 20 minutos, depois a gente retoma.” E volta mesmo. O objetivo é resolver, não ganhar.</p></div>
+        </div>
+      </details>
+
+      <details class="sit">
+        <summary>Você errou e prejudicou alguém</summary>
+        <div class="cols">
+          <div><h3>O que costuma acontecer</h3><p>Minimiza (“não foi nada”), esconde ou joga a responsabilidade para as circunstâncias.</p></div>
+          <div class="maduro"><h3>Resposta madura</h3><p>Você diz “errei”, repara o que dá para reparar e muda o jeito de fazer para o erro não se repetir. Sem drama e sem desculpa.</p></div>
+        </div>
+      </details>
+
+      <details class="sit">
+        <summary>O dinheiro está apertado</summary>
+        <div class="cols">
+          <div><h3>O que costuma acontecer</h3><p>Você esconde de todo mundo e passa no cartão para manter a aparência.</p></div>
+          <div class="maduro"><h3>Resposta madura</h3><p>Você senta com os números, corta o que dá, e conta a situação a quem depende de você. Vergonha resolve menos do que planilha.</p></div>
+        </div>
+      </details>
+
+      <details class="sit">
+        <summary>Um amigo está mal</summary>
+        <div class="cols">
+          <div><h3>O que costuma acontecer</h3><p>“Isso passa, bora tomar uma.” A conversa muda de assunto antes de começar.</p></div>
+          <div class="maduro"><h3>Resposta madura</h3><p>Você pergunta como ele está de verdade e escuta sem consertar. Se for sério, ajuda a procurar apoio profissional.</p></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="block areas" id="areas">
+    <div class="wrap">
+      <h2>As seis áreas, de dentro para fora</h2>
+      <div class="areas-grid">
+        <div class="tabs" role="tablist" aria-label="Áreas da maturidade" id="tabs"></div>
+        <div class="panel" id="panel" role="tabpanel" tabindex="0"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="teste">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>Onde você está hoje?</h2>
+        <p class="muted">Doze afirmações, dois minutos. Responda pensando no que você faz de fato, não no que gostaria de fazer. Nada é enviado para lugar nenhum.</p>
+      </div>
+      <div class="quiz" id="quiz"></div>
+      <div class="actions" style="margin-top:8px">
+        <button class="btn btn-solid" id="btnResultado" type="button">Ver meu resultado</button>
+      </div>
+      <p class="msg" id="quizMsg" role="status"></p>
+
+      <div id="resultado" hidden>
+        <h2 style="font-size:1.7rem;margin-bottom:24px">Seu mapa</h2>
+        <div id="barras"></div>
+        <div class="veredito" id="veredito"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block plano" id="plano">
+    <div class="wrap">
+      <h2>Um hábito. Trinta dias.</h2>
+      <p class="lead" style="margin-top:16px">Escolha uma única coisa pequena e marque cada dia em que você cumpriu. Um anel novo se forma assim: um dia de cada vez.</p>
+
+      <div id="planoNovo">
+        <div class="plano-form">
+          <input id="habito" type="text" maxlength="60" placeholder="Ex.: caminhar 30 minutos" aria-label="Seu hábito de 30 dias">
+          <button class="btn btn-solid" id="btnIniciar" type="button">Começar meu plano</button>
+        </div>
+        <div class="chips" id="chips"></div>
+      </div>
+
+      <div id="planoAtivo" hidden>
+        <h3 id="habitoTitulo" style="margin-top:34px"></h3>
+        <div class="days" id="days"></div>
+        <p class="count" id="contagem" aria-live="polite"></p>
+        <button class="btn btn-line" id="btnRecomecar" type="button">Recomeçar com outro hábito</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block apoio">
+    <div class="wrap">
+      <h2>Pedir ajuda também é maturidade</h2>
+      <div>
+        <p>Muitos homens carregam sozinhos coisas que pesam demais: ansiedade, raiva, luto, dívidas, vícios. Procurar um psicólogo ou um médico não é fraqueza. É o que quem leva a própria vida a sério faz.</p>
+        <p>Se você está em sofrimento agora ou pensando em se machucar, ligue para o CVV no <strong>188</strong> (gratuito, 24 horas) ou procure o pronto-socorro mais próximo.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><p>Conteúdo educativo. O teste é uma reflexão pessoal, não um diagnóstico nem substitui acompanhamento profissional.</p></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
