@@ -3,192 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Um guia prático sobre maturidade masculina: situações reais, seis áreas para trabalhar, teste de autoavaliação, respiração guiada, diário e plano de 30 dias.">
+<meta name="theme-color" content="#16302B">
 <title>Anéis — como um homem amadurece</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Literata:opsz,wght@7..72,400..600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#EDF0EC; --surface:#F7F9F6; --ink:#16302B; --text:#2A3633; --muted:#586863;
-  --line:#C6D0CA; --accent:#B7791F; --accent-text:#8A5A12; --moss:#4F7048; --on-ink:#EDF0EC;
-  --display:"Bricolage Grotesque","Segoe UI",Helvetica,Arial,sans-serif;
-  --body:"Literata",Georgia,"Times New Roman",serif;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#101D1A; --surface:#172622; --ink:#E6EEE9; --text:#C9D6D0; --muted:#94A69E;
-    --line:#2B3E38; --accent:#D9A441; --accent-text:#E0B252; --moss:#7FA577; --on-ink:#101D1A;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#101D1A; --surface:#172622; --ink:#E6EEE9; --text:#C9D6D0; --muted:#94A69E;
-  --line:#2B3E38; --accent:#D9A441; --accent-text:#E0B252; --moss:#7FA577; --on-ink:#101D1A;
-}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:1.0625rem;line-height:1.68;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--display);color:var(--ink);margin:0;line-height:1.08;letter-spacing:-.02em}
-h1{font-size:clamp(2.5rem,6.2vw,4.5rem);font-weight:700}
-h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:700}
-h3{font-size:1.25rem;font-weight:600;letter-spacing:-.01em}
-p{margin:0 0 1em;max-width:62ch}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
-.block{padding:clamp(56px,9vw,112px) 0}
-.lead{font-size:1.2rem;color:var(--text);max-width:52ch}
-.muted{color:var(--muted)}
-
-/* topo */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap}
-.brand{font-family:var(--display);font-weight:700;font-size:1.2rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
-.brand svg{width:22px;height:22px}
-.top nav{display:flex;gap:22px;font-family:var(--display);font-weight:500;font-size:.98rem}
-.top nav a{text-decoration:none;color:var(--muted);padding:6px 0}
-.top nav a:hover{color:var(--ink)}
-
-/* botões */
-.btn{font-family:var(--display);font-weight:600;font-size:1rem;border-radius:999px;padding:13px 26px;border:2px solid var(--ink);cursor:pointer;text-decoration:none;display:inline-block;line-height:1.2;transition:background .2s,color .2s}
-.btn-solid{background:var(--ink);color:var(--on-ink)}
-.btn-solid:hover{background:var(--moss);border-color:var(--moss);color:#fff}
-.btn-line{background:transparent;color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:var(--on-ink)}
-.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
-
-/* hero */
-.hero{padding:clamp(40px,7vw,88px) 0 clamp(48px,8vw,100px)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:center}
-.hero h1{margin-bottom:24px}
-.rings-box{position:relative}
-#rings{width:100%;height:auto;display:block;overflow:visible}
-.ring{cursor:pointer}
-.ring .vis{fill:none;stroke:var(--moss);stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.5s cubic-bezier(.4,.1,.2,1) forwards;animation-delay:calc(var(--i) * .32s + .2s);transition:stroke .25s,stroke-width .25s}
-.ring .hit{fill:none;stroke:transparent;stroke-width:22}
-.ring:hover .vis,.ring:focus-visible .vis{stroke:var(--accent)}
-.ring.on .vis{stroke:var(--accent);stroke-width:9!important}
-.ring:focus-visible{outline:none}
-.ring:focus-visible .vis{stroke-width:9!important}
-.pith{fill:var(--accent)}
-@keyframes draw{to{stroke-dashoffset:0}}
-.ring-caption{margin:14px 0 0;font-family:var(--display);font-size:.98rem;color:var(--muted);min-height:3em;max-width:none}
-.ring-caption strong{color:var(--ink);font-weight:600}
-
-/* situações */
-.split-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,5vw,72px);align-items:end;margin-bottom:44px}
-.split-head p{margin:0}
-.sit{border-top:1px solid var(--line)}
-.sit:last-of-type{border-bottom:1px solid var(--line)}
-.sit summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--display);font-weight:600;font-size:1.3rem;color:var(--ink)}
-.sit summary::-webkit-details-marker{display:none}
-.sit summary::after{content:"";flex:none;width:14px;height:14px;border-right:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(45deg) translate(-3px,-3px);transition:transform .25s}
-.sit[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
-.sit .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,4vw,56px);padding:0 0 30px}
-.sit .cols div{padding-top:2px}
-.sit h3{font-size:1rem;color:var(--muted);margin-bottom:8px;font-weight:600}
-.sit .maduro{border-left:4px solid var(--accent);padding-left:20px}
-.sit .maduro h3{color:var(--accent-text)}
-.sit p{margin:0}
-
-/* áreas */
-.areas{background:var(--surface);border-block:1px solid var(--line)}
-.areas-grid{display:grid;grid-template-columns:280px 1fr;gap:clamp(24px,5vw,72px);margin-top:44px;align-items:start}
-.tabs{display:flex;flex-direction:column;gap:2px;position:relative}
-.tabs::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:2px;background:var(--line)}
-.tab{position:relative;text-align:left;font-family:var(--display);font-weight:500;font-size:1.1rem;background:none;border:0;color:var(--muted);padding:11px 8px 11px 40px;cursor:pointer;border-radius:8px}
-.tab::before{content:"";position:absolute;left:4px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;border:2px solid var(--line);background:var(--surface);transition:all .2s}
-.tab:hover{color:var(--ink)}
-.tab[aria-selected="true"]{color:var(--ink);font-weight:700}
-.tab[aria-selected="true"]::before{border-color:var(--accent);background:var(--accent)}
-.panel h3{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:10px}
-.panel .frase{font-size:1.25rem;color:var(--ink);max-width:44ch;margin-bottom:28px}
-.panel h4{font-family:var(--display);font-size:1.05rem;margin:0 0 10px;color:var(--ink)}
-.panel ul{margin:0 0 30px;padding:0;list-style:none;max-width:60ch}
-.panel li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line)}
-.panel li::before{content:"";position:absolute;left:4px;top:1.05em;width:11px;height:11px;border-radius:50%;border:3px solid var(--moss)}
-.armadilha{background:var(--bg);border-left:4px solid var(--accent);padding:16px 20px;max-width:60ch;border-radius:0 8px 8px 0}
-.armadilha p{margin:0}
-.armadilha strong{font-family:var(--display);color:var(--ink)}
-
-/* teste */
-.quiz{max-width:760px}
-.q{border:0;padding:0;margin:0 0 30px;min-width:0}
-.q legend{font-size:1.12rem;color:var(--ink);padding:0;margin-bottom:12px;font-weight:500}
-.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.scale label{position:relative;display:block}
-.scale input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
-.scale span{display:block;text-align:center;font-family:var(--display);font-size:.93rem;font-weight:500;padding:11px 6px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--muted);transition:all .15s;line-height:1.25}
-.scale input:hover+span{border-color:var(--moss);color:var(--ink)}
-.scale input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--on-ink);font-weight:600}
-.scale input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
-.msg{font-family:var(--display);color:var(--accent-text);font-weight:600;margin-top:14px;min-height:1.5em}
-#resultado{margin-top:52px;max-width:760px}
-#resultado[hidden]{display:none}
-.bar-row{display:grid;grid-template-columns:150px 1fr 48px;gap:14px;align-items:center;margin-bottom:14px;font-family:var(--display);font-weight:500}
-.bar{height:14px;background:var(--line);border-radius:99px;overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:var(--moss);border-radius:99px;transition:width .9s cubic-bezier(.3,.7,.2,1)}
-.bar-row.low .bar i{background:var(--accent)}
-.bar-row b{text-align:right;color:var(--ink)}
-.veredito{margin-top:30px;padding:24px 26px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
-.veredito h3{margin-bottom:8px}
-.veredito p:last-child{margin-bottom:0}
-
-/* plano */
-.plano{background:var(--ink);color:var(--on-ink)}
-.plano h2,.plano h3{color:var(--on-ink)}
-.plano .muted{color:color-mix(in srgb,var(--on-ink) 70%,transparent)}
-.plano-form{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 14px}
-.plano-form input{flex:1 1 280px;font:inherit;font-family:var(--display);font-size:1.05rem;padding:13px 18px;border-radius:999px;border:2px solid color-mix(in srgb,var(--on-ink) 40%,transparent);background:transparent;color:var(--on-ink)}
-.plano-form input::placeholder{color:color-mix(in srgb,var(--on-ink) 55%,transparent)}
-.plano .btn-solid{background:var(--accent);border-color:var(--accent);color:#16302B}
-.plano .btn-solid:hover{background:var(--on-ink);border-color:var(--on-ink);color:var(--ink)}
-.plano .btn-line{border-color:color-mix(in srgb,var(--on-ink) 50%,transparent);color:var(--on-ink)}
-.plano .btn-line:hover{background:var(--on-ink);color:var(--ink)}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{font-family:var(--display);font-size:.92rem;padding:7px 15px;border-radius:999px;border:1px solid color-mix(in srgb,var(--on-ink) 35%,transparent);background:transparent;color:var(--on-ink);cursor:pointer}
-.chip:hover{border-color:var(--accent);color:var(--accent)}
-.days{display:grid;grid-template-columns:repeat(10,1fr);gap:clamp(6px,1.4vw,14px);margin:30px 0 22px;max-width:760px}
-.day{aspect-ratio:1;border-radius:50%;border:2px solid color-mix(in srgb,var(--on-ink) 40%,transparent);background:transparent;color:var(--on-ink);font-family:var(--display);font-weight:600;font-size:clamp(.7rem,1.6vw,.95rem);cursor:pointer;padding:0;transition:all .15s}
-.day:hover{border-color:var(--accent)}
-.day[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#16302B}
-.plano .count{font-family:var(--display);font-size:1.15rem;font-weight:600;margin:0 0 18px}
-.plano [hidden]{display:none!important}
-
-/* apoio */
-.apoio .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
-.apoio h2{margin-bottom:0}
-
-footer{border-top:1px solid var(--line);padding:32px 0 44px;font-family:var(--display);color:var(--muted);font-size:.95rem}
-footer p{margin:0;max-width:none}
-
-@media (max-width:860px){
-  .hero .wrap,.split-head,.apoio .wrap{grid-template-columns:1fr}
-  .areas-grid{grid-template-columns:1fr}
-  .tabs{flex-direction:row;flex-wrap:wrap;gap:6px}
-  .tabs::before{display:none}
-  .tab{padding:9px 16px;border:2px solid var(--line);border-radius:999px;font-size:1rem}
-  .tab::before{display:none}
-  .tab[aria-selected="true"]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
-  .rings-box{max-width:420px;margin-inline:auto;width:100%}
-  .top nav{gap:16px;font-size:.92rem}
-}
-@media (max-width:560px){
-  .sit .cols{grid-template-columns:1fr}
-  .scale{grid-template-columns:1fr 1fr}
-  .bar-row{grid-template-columns:1fr 44px;gap:6px 12px}
-  .bar-row span{grid-column:1/-1}
-  .days{grid-template-columns:repeat(6,1fr)}
-  .top nav a:nth-child(2){display:none}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .ring .vis{animation:none;stroke-dashoffset:0}
-  *{transition-duration:.01ms!important}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -202,8 +23,12 @@ footer p{margin:0;max-width:none}
       <a href="#situacoes">Situações</a>
       <a href="#areas">Seis áreas</a>
       <a href="#teste">Teste</a>
+      <a href="#ferramentas">Ferramentas</a>
       <a href="#plano">Plano de 30 dias</a>
     </nav>
+    <button class="theme-btn" id="tema" type="button" aria-label="Alternar entre tema claro e escuro" title="Alternar tema">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>
+    </button>
   </div>
 </header>
 
@@ -284,12 +109,29 @@ footer p{margin:0;max-width:none}
     </div>
   </section>
 
-  <section class="block" id="teste">
+  <section class="block" id="mitos">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>Cinco frases que atrapalham</h2>
+        <p class="muted">Muita gente cresce ouvindo ideias que parecem força e, na prática, travam. Veja o que costuma estar por trás delas.</p>
+      </div>
+      <div class="mitos">
+        <div class="mito"><p class="diz">Homem de verdade não chora.</p><p class="real">Chorar é uma resposta do corpo, não um defeito de caráter. Segurar tudo costuma cobrar depois, em forma de raiva ou cansaço. Maturidade é saber o que fazer com o que se sente.</p></div>
+        <div class="mito"><p class="diz">Maturidade é ganhar muito dinheiro.</p><p class="real">Renda ajuda, mas não amadurece ninguém. Maduro é quem gasta com consciência e honra os compromissos com o que tem, seja muito ou pouco.</p></div>
+        <div class="mito"><p class="diz">Ser firme é nunca ceder.</p><p class="real">Firmeza é ter limites claros. Teimosia é não rever a própria posição. Quem nunca cede não negocia: só briga.</p></div>
+        <div class="mito"><p class="diz">Pedir ajuda é sinal de fraqueza.</p><p class="real">Pedir ajuda é pedir um mapa. Você continua dirigindo, só que com menos tempo perdido e menos erros repetidos.</p></div>
+        <div class="mito"><p class="diz">Maduro é quem está sempre sério.</p><p class="real">Humor e leveza fazem parte. Um homem maduro consegue rir de si mesmo sem perder o respeito por si mesmo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block areas" id="teste">
     <div class="wrap">
       <div class="split-head">
         <h2>Onde você está hoje?</h2>
         <p class="muted">Doze afirmações, dois minutos. Responda pensando no que você faz de fato, não no que gostaria de fazer. Nada é enviado para lugar nenhum.</p>
       </div>
+      <div class="quiz-prog"><div class="bar"><i id="progBar" style="width:0"></i></div><span id="quizProg">0 de 12 respondidas</span></div>
       <div class="quiz" id="quiz"></div>
       <div class="actions" style="margin-top:8px">
         <button class="btn btn-solid" id="btnResultado" type="button">Ver meu resultado</button>
@@ -297,9 +139,49 @@ footer p{margin:0;max-width:none}
       <p class="msg" id="quizMsg" role="status"></p>
 
       <div id="resultado" hidden>
-        <h2 style="font-size:1.7rem;margin-bottom:24px">Seu mapa</h2>
+        <h2 style="font-size:1.7rem;margin-bottom:10px">Seu mapa</h2>
+        <p class="muted" id="salvoEm"></p>
         <div id="barras"></div>
         <div class="veredito" id="veredito"></div>
+        <div class="actions">
+          <button class="btn btn-line" id="btnCopiar" type="button">Copiar meu resultado</button>
+          <button class="btn btn-line" id="btnRefazer" type="button">Refazer o teste</button>
+        </div>
+        <p class="msg" id="copiaMsg" role="status"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="ferramentas">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>Duas ferramentas para o dia a dia</h2>
+        <p class="muted">Uma para segurar a reação na hora. Outra para pensar no que aconteceu ao fim do dia.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool" aria-labelledby="t1">
+          <h3 id="t1">Pausa de um minuto</h3>
+          <p class="muted">Antes de responder com raiva, respire assim: inspire por 4 segundos, segure por 4 e solte por 6. São 4 rodadas.</p>
+          <div class="breath">
+            <div class="breath-orb" id="orb"></div>
+            <div class="breath-label" id="breathLabel" aria-live="polite">Pronto?</div>
+          </div>
+          <button class="btn btn-solid" id="btnRespirar" type="button">Começar</button>
+        </div>
+
+        <div class="tool" aria-labelledby="t2">
+          <h3 id="t2">Revisão da noite</h3>
+          <p class="muted">Três perguntas, uma vez por dia. O que você escreve fica salvo só neste aparelho.</p>
+          <label for="d1">O que fiz hoje que me orgulha?</label>
+          <textarea id="d1" rows="2" maxlength="500"></textarea>
+          <label for="d2">Onde reagi mal e o que faria diferente?</label>
+          <textarea id="d2" rows="2" maxlength="500"></textarea>
+          <label for="d3">Qual é a única coisa que preciso fazer amanhã?</label>
+          <textarea id="d3" rows="2" maxlength="500"></textarea>
+          <div class="actions" style="margin-top:20px"><button class="btn btn-solid" id="btnDiario" type="button">Salvar o dia de hoje</button></div>
+          <p class="msg" id="diarioMsg" role="status"></p>
+          <div id="historico"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -319,9 +201,13 @@ footer p{margin:0;max-width:none}
 
       <div id="planoAtivo" hidden>
         <h3 id="habitoTitulo" style="margin-top:34px"></h3>
+        <p class="muted" id="hojeInfo" style="margin:6px 0 0"></p>
         <div class="days" id="days"></div>
         <p class="count" id="contagem" aria-live="polite"></p>
-        <button class="btn btn-line" id="btnRecomecar" type="button">Recomeçar com outro hábito</button>
+        <div class="actions" style="margin-top:0">
+          <button class="btn btn-solid" id="btnHoje" type="button">Marcar hoje como cumprido</button>
+          <button class="btn btn-line" id="btnRecomecar" type="button">Recomeçar com outro hábito</button>
+        </div>
       </div>
     </div>
   </section>
@@ -341,300 +227,6 @@ footer p{margin:0;max-width:none}
   <div class="wrap"><p>Conteúdo educativo. O teste é uma reflexão pessoal, não um diagnóstico nem substitui acompanhamento profissional.</p></div>
 </footer>
 
-<script>
-(function(){
-  "use strict";
-
-  /* ---------- dados ---------- */
-  var AREAS = [
-    { nome:"Responsabilidade",
-      frase:"Maduro é quem responde pelo que fez e pelo que deixou de fazer.",
-      pratica:["Cumpra o que prometeu, principalmente as promessas pequenas.","Ao errar, diga “errei” e diga o que vai fazer a respeito.","Hoje, termine uma tarefa que você vem adiando."],
-      armadilha:"Culpar o chefe, a ex, a infância ou a crise. Entender a causa ajuda; usar a causa como desculpa te mantém parado." },
-    { nome:"Emoções",
-      frase:"Sentir raiva, medo e tristeza é normal. Descarregar nos outros não é.",
-      pratica:["Dê nome ao que sente antes de reagir: “estou com raiva e com medo de falhar”.","Espere 20 minutos antes de responder uma mensagem que te irritou.","Converse com uma pessoa de confiança, não só consigo mesmo."],
-      armadilha:"Achar que homem forte não sente. Emoção engolida não some: costuma voltar como irritação, bebida ou isolamento." },
-    { nome:"Disciplina",
-      frase:"Fazer o que precisa ser feito, mesmo sem vontade.",
-      pratica:["Fixe o mínimo de sono, comida e movimento antes de qualquer meta grande.","Faça a tarefa mais importante do dia antes de abrir o celular.","Reduza o atrito: deixe roupa, agenda e material prontos na véspera."],
-      armadilha:"Esperar motivação. Ela vai e volta. Quem tem constância tem um sistema simples, não mais força de vontade." },
-    { nome:"Dinheiro",
-      frase:"Autonomia financeira é liberdade para você e cuidado com quem depende de você.",
-      pratica:["Anote todos os gastos durante 30 dias, sem julgamento.","Monte uma reserva de emergência, começando por um valor pequeno e fixo.","Fuja do rotativo do cartão e de dívida para consumo."],
-      armadilha:"Gastar para parecer bem-sucedido. Carro, roupa e viagem impressionam pouco quem vê a fatura junto." },
-    { nome:"Relações",
-      frase:"Ouvir mais do que provar que tem razão. Ser presença, não plateia.",
-      pratica:["Numa conversa difícil, ouça até o fim sem interromper.","Peça desculpas sem a palavra “mas”.","Marque algo com um amigo ainda esta semana."],
-      armadilha:"Competir com todo mundo e só ter amizades de superfície. Muitos homens chegam aos 40 sem ter com quem falar de verdade." },
-    { nome:"Propósito e saúde",
-      frase:"Saber para onde vai e cuidar do corpo que leva você até lá.",
-      pratica:["Escreva três valores seus e confira se a sua semana os reflete.","Faça check-up anual e não deixe sintoma esquisito para depois.","Considere terapia antes da crise, não só durante."],
-      armadilha:"Adiar médico e autoconhecimento até virar problema grande. Cuidar cedo sai mais barato e dói menos." }
-  ];
-
-  var PERGUNTAS = [
-    [0,"Quando erro, assumo sem procurar culpados."],
-    [0,"Cumpro o que prometo, mesmo quando ninguém está cobrando."],
-    [1,"Consigo dizer o que sinto sem virar agressividade ou silêncio."],
-    [1,"Depois de uma discussão, volto para conversar em vez de fingir que nada aconteceu."],
-    [2,"Tenho horários mínimos de sono, comida e movimento."],
-    [2,"Faço o que é importante antes de me distrair."],
-    [3,"Sei quanto ganho e quanto gasto por mês."],
-    [3,"Tenho uma reserva para imprevistos ou um plano para montá-la."],
-    [4,"Ouço até o fim sem interromper nem preparar a resposta."],
-    [4,"Tenho pelo menos um amigo com quem falo de assuntos difíceis."],
-    [5,"Sei dizer três valores que guiam minhas decisões."],
-    [5,"Faço exames de rotina e busco ajuda quando preciso."]
-  ];
-  var ESCALA = ["Raramente","Às vezes","Quase sempre","Sempre"];
-
-  var $ = function(id){ return document.getElementById(id); };
-  var atual = 0;
-
-  /* ---------- anéis ---------- */
-  var NS = "http://www.w3.org/2000/svg";
-  var svg = $("rings");
-  var aneis = [];
-
-  function caminho(r, seed){
-    var n = 90, d = "";
-    for (var k = 0; k < n; k++){
-      var a = k / n * Math.PI * 2;
-      var w = Math.sin(a*2 + seed)*2.4 + Math.sin(a*3 + seed*1.7)*1.7 + Math.sin(a*5 + seed*2.3)*.9;
-      var rr = r + w;
-      var x = 200 + Math.cos(a)*rr, y = 200 + Math.sin(a)*rr*.98;
-      d += (k ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
-    }
-    return d + "Z";
-  }
-
-  function desenharAneis(){
-    var pith = document.createElementNS(NS, "circle");
-    pith.setAttribute("cx", 200); pith.setAttribute("cy", 200); pith.setAttribute("r", 13);
-    pith.setAttribute("class", "pith");
-    svg.appendChild(pith);
-
-    AREAS.forEach(function(area, i){
-      var g = document.createElementNS(NS, "g");
-      g.setAttribute("class", "ring");
-      g.setAttribute("tabindex", "0");
-      g.setAttribute("role", "button");
-      g.setAttribute("aria-label", "Anel " + (i+1) + ": " + area.nome);
-      g.style.setProperty("--i", i);
-      var d = caminho(40 + i*27, i*1.9 + .6);
-
-      var hit = document.createElementNS(NS, "path");
-      hit.setAttribute("d", d); hit.setAttribute("class", "hit");
-      var vis = document.createElementNS(NS, "path");
-      vis.setAttribute("d", d); vis.setAttribute("class", "vis");
-      vis.setAttribute("pathLength", "1");
-      vis.style.strokeWidth = (5 + (i % 3)) + "px";
-
-      g.appendChild(hit); g.appendChild(vis);
-      g.addEventListener("click", function(){ escolher(i, true); });
-      g.addEventListener("keydown", function(e){
-        if (e.key === "Enter" || e.key === " "){ e.preventDefault(); escolher(i, true); }
-      });
-      g.addEventListener("mouseenter", function(){ legenda(i); });
-      g.addEventListener("focus", function(){ legenda(i); });
-      g.addEventListener("mouseleave", function(){ legenda(atual); });
-      svg.appendChild(g);
-      aneis.push(g);
-    });
-  }
-
-  function legenda(i){
-    $("ringCaption").innerHTML = "<strong>Anel " + (i+1) + ": " + AREAS[i].nome + ".</strong> " + AREAS[i].frase;
-  }
-
-  /* ---------- abas ---------- */
-  function montarAbas(){
-    var box = $("tabs");
-    AREAS.forEach(function(area, i){
-      var b = document.createElement("button");
-      b.type = "button"; b.className = "tab"; b.setAttribute("role", "tab");
-      b.id = "tab" + i; b.textContent = area.nome;
-      b.setAttribute("aria-controls", "panel");
-      b.addEventListener("click", function(){ escolher(i, false); });
-      b.addEventListener("keydown", function(e){
-        var k = e.key, n = AREAS.length, alvo = null;
-        if (k === "ArrowDown" || k === "ArrowRight") alvo = (i + 1) % n;
-        if (k === "ArrowUp" || k === "ArrowLeft") alvo = (i - 1 + n) % n;
-        if (alvo !== null){ e.preventDefault(); escolher(alvo, false); $("tab" + alvo).focus(); }
-      });
-      box.appendChild(b);
-    });
-  }
-
-  function escolher(i, rolar){
-    atual = i;
-    var a = AREAS[i];
-    Array.prototype.forEach.call(document.querySelectorAll(".tab"), function(t, k){
-      t.setAttribute("aria-selected", k === i ? "true" : "false");
-      t.tabIndex = k === i ? 0 : -1;
-    });
-    aneis.forEach(function(g, k){ g.classList.toggle("on", k === i); });
-    var lis = a.pratica.map(function(p){ return "<li>" + p + "</li>"; }).join("");
-    $("panel").setAttribute("aria-labelledby", "tab" + i);
-    $("panel").innerHTML =
-      "<h3>" + a.nome + "</h3>" +
-      "<p class='frase'>" + a.frase + "</p>" +
-      "<h4>Na prática</h4><ul>" + lis + "</ul>" +
-      "<div class='armadilha'><p><strong>Armadilha comum.</strong> " + a.armadilha + "</p></div>";
-    legenda(i);
-    if (rolar){
-      var alvo = $("areas");
-      var reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      alvo.scrollIntoView({ behavior: reduzir ? "auto" : "smooth", block: "start" });
-    }
-  }
-
-  /* ---------- teste ---------- */
-  function montarTeste(){
-    var html = "";
-    PERGUNTAS.forEach(function(q, i){
-      html += "<fieldset class='q'><legend>" + q[1] + "</legend><div class='scale'>";
-      ESCALA.forEach(function(rot, v){
-        html += "<label><input type='radio' name='q" + i + "' value='" + (v+1) + "'><span>" + rot + "</span></label>";
-      });
-      html += "</div></fieldset>";
-    });
-    $("quiz").innerHTML = html;
-  }
-
-  function resultado(){
-    var soma = AREAS.map(function(){ return 0; });
-    var faltam = 0;
-    PERGUNTAS.forEach(function(q, i){
-      var sel = document.querySelector("input[name='q" + i + "']:checked");
-      if (!sel){ faltam++; return; }
-      soma[q[0]] += parseInt(sel.value, 10);
-    });
-    var msg = $("quizMsg");
-    if (faltam){
-      msg.textContent = faltam === 1 ? "Falta responder 1 afirmação." : "Faltam " + faltam + " afirmações para responder.";
-      return;
-    }
-    msg.textContent = "";
-
-    var pct = soma.map(function(s){ return Math.round((s - 2) / 6 * 100); });
-    var barras = "";
-    pct.forEach(function(p, i){
-      barras += "<div class='bar-row" + (p < 50 ? " low" : "") + "'><span>" + AREAS[i].nome + "</span>" +
-                "<div class='bar'><i data-w='" + p + "'></i></div><b>" + p + "%</b></div>";
-    });
-    $("barras").innerHTML = barras;
-    $("resultado").hidden = false;
-    requestAnimationFrame(function(){
-      requestAnimationFrame(function(){
-        Array.prototype.forEach.call(document.querySelectorAll(".bar i"), function(el){
-          el.style.width = el.getAttribute("data-w") + "%";
-        });
-      });
-    });
-
-    var menor = 0, maior = 0;
-    pct.forEach(function(p, i){ if (p < pct[menor]) menor = i; if (p > pct[maior]) maior = i; });
-    var v;
-    if (pct[maior] === pct[menor]){
-      v = "<h3>Um perfil equilibrado</h3><p>Suas seis áreas estão no mesmo nível. Escolha a que mais importa para você agora e transforme uma prática dela em hábito no plano de 30 dias.</p>";
-    } else {
-      v = "<h3>Por onde começar: " + AREAS[menor].nome + "</h3>" +
-          "<p>Seu ponto mais forte é <strong>" + AREAS[maior].nome + "</strong>. A área com mais espaço para crescer é <strong>" + AREAS[menor].nome + "</strong>. Uma primeira prática:</p>" +
-          "<p><em>" + AREAS[menor].pratica[0] + "</em></p>" +
-          "<p><button class='btn btn-line' type='button' id='verArea'>Ler sobre " + AREAS[menor].nome + "</button></p>";
-    }
-    $("veredito").innerHTML = v;
-    var vb = $("verArea");
-    if (vb) vb.addEventListener("click", function(){ escolher(menor, true); });
-    $("resultado").scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
-  }
-
-  /* ---------- plano de 30 dias ---------- */
-  var CHAVE = "aneis-plano-v1";
-  var estado = { habito:"", dias:[] };
-
-  function carregar(){
-    try {
-      var bruto = localStorage.getItem(CHAVE);
-      if (bruto){
-        var e = JSON.parse(bruto);
-        if (e && typeof e.habito === "string" && Array.isArray(e.dias) && e.dias.length === 30) estado = e;
-      }
-    } catch (err) {}
-  }
-  function salvar(){
-    try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (err) {}
-  }
-
-  function desenharPlano(){
-    var ativo = !!estado.habito;
-    $("planoNovo").hidden = ativo;
-    $("planoAtivo").hidden = !ativo;
-    if (!ativo) return;
-    $("habitoTitulo").textContent = estado.habito;
-    var box = $("days");
-    box.innerHTML = "";
-    estado.dias.forEach(function(feito, i){
-      var b = document.createElement("button");
-      b.type = "button"; b.className = "day";
-      b.textContent = i + 1;
-      b.setAttribute("aria-pressed", feito ? "true" : "false");
-      b.setAttribute("aria-label", "Dia " + (i+1));
-      b.addEventListener("click", function(){
-        estado.dias[i] = !estado.dias[i];
-        b.setAttribute("aria-pressed", estado.dias[i] ? "true" : "false");
-        salvar(); contar();
-      });
-      box.appendChild(b);
-    });
-    contar();
-  }
-
-  function contar(){
-    var n = estado.dias.filter(Boolean).length;
-    var t = n + " de 30 dias cumpridos.";
-    if (n === 30) t += " Você fechou o ciclo. Isso já é caráter, não só vontade.";
-    else if (n >= 7) t += " Continue: a repetição é o que forma o hábito.";
-    $("contagem").textContent = t;
-  }
-
-  function iniciar(){
-    var v = $("habito").value.trim();
-    if (!v){ $("habito").focus(); return; }
-    estado = { habito: v, dias: new Array(30).fill(false) };
-    salvar(); desenharPlano();
-  }
-
-  function montarPlano(){
-    ["Acordar sempre no mesmo horário","Caminhar 30 minutos","Anotar todos os meus gastos","Ligar para um amigo toda semana","Ficar 1 hora sem celular à noite"].forEach(function(s){
-      var c = document.createElement("button");
-      c.type = "button"; c.className = "chip"; c.textContent = s;
-      c.addEventListener("click", function(){ $("habito").value = s; $("habito").focus(); });
-      $("chips").appendChild(c);
-    });
-    $("btnIniciar").addEventListener("click", iniciar);
-    $("habito").addEventListener("keydown", function(e){ if (e.key === "Enter") iniciar(); });
-    $("btnRecomecar").addEventListener("click", function(){
-      if (!window.confirm("Apagar o progresso atual e escolher outro hábito?")) return;
-      estado = { habito:"", dias:[] };
-      $("habito").value = "";
-      salvar(); desenharPlano();
-    });
-  }
-
-  /* ---------- início ---------- */
-  desenharAneis();
-  montarAbas();
-  escolher(0, false);
-  $("ringCaption").textContent = "Como numa árvore, cada anel se apoia no anterior. Toque em um para ler sobre a área.";
-  montarTeste();
-  $("btnResultado").addEventListener("click", resultado);
-  carregar();
-  montarPlano();
-  desenharPlano();
-})();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
